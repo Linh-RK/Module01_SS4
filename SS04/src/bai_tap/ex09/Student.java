@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Student {
 //    Xây dựng lớp Student gồm các thuộc tính như:
 //    mã HS, tên HS, tuổi, giới tính, địa chỉ và số điện thoại.
-    private String ID;
+    private int ID;
     private String fullName;
     private int age;
     private boolean gender;
@@ -13,10 +13,58 @@ public class Student {
     private String phone;
 //    các phương thức khởi tạo (constructor) 0 tham số và có tham số,
 
+    public int getID() {
+        return ID;
+    }
+
+    public void setID() {
+        this.ID = ID;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isGender() {
+        return gender;
+    }
+
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public Student() {
     }
 
-    public Student(String ID, String fullName, int age, Boolean gender, String address, String phone) {
+    public Student(int ID, String fullName, int age, Boolean gender, String address, String phone) {
         this.ID = ID;
         this.fullName = fullName;
         this.age = age;
@@ -28,7 +76,7 @@ public class Student {
 
     public void inputData(Scanner scanner){
         System.out.println("Please enter student ID:");
-        this.ID = scanner.next();
+        this.ID = Integer.parseInt(scanner.nextLine());
         System.out.println("Please enter student name:");
         this.fullName = scanner.next();
         System.out.println("Please enter student age:");
